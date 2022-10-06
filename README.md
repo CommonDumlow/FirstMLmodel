@@ -1,6 +1,3 @@
-# FirstMLmodel
-This is rundown of the code.
-
 ## Decribe the dataset
 
 ```
