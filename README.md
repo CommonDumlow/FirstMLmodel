@@ -1,5 +1,5 @@
 # FirstMLmodel
-This is rundown of the code with what each thing does.
+This is rundown of the code.
 
 ## Decribe the dataset
 
@@ -15,10 +15,12 @@ from sklearn.tree import DecisionTreeClassifier
 
 ds = pd.read_csv('smoke_detection_iot.csv')
 X = ds.drop(columns = ['Fire Alarm', 'Unnamed: 0', 'UTC'])
+# here we are splitting the dataset into an output set and input set according to our needs.
 y = ds['Fire Alarm']
 
 model = DecisionTreeClassifier()
 model.fit(X, y)
+
 predictions = model.predict([ [5153, 26.029, 54.6, 4, 403 ,32532, 14523, 956.668, 0.550 ,0.30, 0.20, 0.2, 2.000] ])
 predictions
 ```
