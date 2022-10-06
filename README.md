@@ -56,6 +56,7 @@ predictions = model.predict(X_test)
 accuracy_score(y_test, predictions)
 ```
 ## Visualizing the model
+```
 from sklearn import tree
 
 ds = pd.read_csv('smoke_detection_iot.csv')
@@ -65,3 +66,4 @@ y = ds['Fire Alarm']
 model = DecisionTreeClassifier()
 model.fit(X, y)
 tree.export_graphviz(model, out_file="model.dot", feature_names=['Temperature[C]', 'Humidity[%]', 'TVOC[ppb]', 'eCO2[ppm]', 'Raw H2', 'Raw Ethanol', 'Pressure[hPa]', 'PM1.0', 'PM2.5', 'NC0.5', 'NC1.0', 'NC2.5', 'CNT'], label = 'all', rounded = True, filled=True)
+```
