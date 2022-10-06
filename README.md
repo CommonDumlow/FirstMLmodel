@@ -8,14 +8,14 @@ import pandas as pd
 ds = pd.read_csv('smoke_detection_iot.csv')
 ds.describe()
 ```
-## To predict
+## To predict(cleaning the dataset)
 ```
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 
 ds = pd.read_csv('smoke_detection_iot.csv')
 X = ds.drop(columns = ['Fire Alarm', 'Unnamed: 0', 'UTC'])
-# here we are splitting the dataset into an output set and input set according to our needs.
+# here we are splitting and cleaning the dataset into an output set and input set according to our needs.
 y = ds['Fire Alarm']
 
 model = DecisionTreeClassifier()
